@@ -22,7 +22,7 @@ export default withMT({
     },
     extend: {
       colors: {
-        gray: '#C4C4C4',
+        gray: '#F2F2F2',
         qora: "#000000",
         oq: "#FFFFFF",
         siu: "#C4C4C4",

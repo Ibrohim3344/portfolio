@@ -1,36 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 function LanguageSwitcher() {
     const { i18n } = useTranslation();
-
-    const lang = localStorage.getItem("language");
+    const [language, setLanguage] = useState(localStorage.getItem("language") || "en");
 
     useEffect(() => {
-        if (!lang) {
+        if (!localStorage.getItem("language")) {
             localStorage.setItem("language", "en");
+        } else {
+            i18n.changeLanguage(language);
         }
-    }, []);
+    }, [language, i18n]);
 
     const handleLanguageChange = (event) => {
         const selectedLanguage = event.target.value;
         localStorage.setItem("language", selectedLanguage);
+        setLanguage(selectedLanguage);
         i18n.changeLanguage(selectedLanguage);
     };
 
     return (
-        <div className="relative max-w-[120px] text-secondary">
+        <div className="relative max-w-[180px]">
             <select
-                defaultValue={localStorage.getItem("language")}
+                value={language}
                 onChange={handleLanguageChange}
                 name="selectOption"
-                className="mt-1 block w-full py-2 px-3 border border-gray-300 dark:border-gren bg-transparent dark:text-oq rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-oq sm:text-sm"
+                className="w-full py-3 px-4 bg-white/20 dark:bg-oq/30 text-gray-900 dark:text-gray-100 rounded-xl shadow-md backdrop-blur-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 transition-all duration-300 ease-in-out cursor-pointer"
             >
-                <option value="uz">
-                    uz
-                </option>
-                <option value="ru">ru</option>
-                <option value="en">en</option>
+                <option value="uz">🇺🇿</option>
+                <option value="ru">🇷🇺</option>
+                <option value="en">🇬🇧</option>
             </select>
         </div>
     );

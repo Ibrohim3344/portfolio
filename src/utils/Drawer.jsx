@@ -10,7 +10,7 @@ import me from "/public/me.jpg";
 import { useTranslation } from "react-i18next";
 import useStore from "./zustand";
 import { FaSun, FaMoon } from 'react-icons/fa';
-import SecondSwitcher from "./SecondSwitcher";
+// import SecondSwitcher from "./SecondSwitcher";
 
 
 
@@ -29,20 +29,24 @@ export function DrawerDefault() {
         {
             key: "Contact",
             icon: "fa-solid fa-phone-volume",
+            href: "tel:998990182008"
         },
         {
             key: "About",
             icon: "fa-regular fa-address-card",
+            href: "#qw"
 
         },
         {
             key: "Skills",
             icon: "fa-solid fa-bolt",
+            href: "#skill"
 
         },
         {
             key: "Portfolio",
             icon: "fa-solid fa-user",
+            href: "#port"
 
         }
     ];
@@ -77,11 +81,11 @@ export function DrawerDefault() {
 
 
                 <ul className="flex flex-col items-start text-xl gap-[20px]">
-                    {menuItems.map(({ key, icon }) => (
-                        <li key={key} className="w-full px-2 rounded-xl py-[5px] border-2 border-qora dark:border-oq text-qora dark:text-oq flex items-center justify-between">
+                    {menuItems.map(({ key, icon, href }) => (
+                        <a href={href} className="w-full"><li key={key} className="w-full px-2 rounded-xl py-[5px] border-2 border-qora dark:border-oq text-qora dark:text-oq flex items-center justify-between">
                             <span>{t(key)}</span>
                             <i className={icon}></i>
-                        </li>
+                        </li></a>   
                     ))}
                 </ul>
 

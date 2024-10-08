@@ -8,7 +8,7 @@ const AboutMe = () => {
     const { t } = useTranslation("about");
 
     return (
-        <section className='bg-gray py-[50px] dark:bg-qora'>
+        <section id='qw' className='bg-gray py-[50px] dark:bg-qora'>
             <div className='container'>
                 <div className='flex flex-col items-center gap-[50px]'>
                     <Div text={t("about")} />

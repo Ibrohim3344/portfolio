@@ -12,7 +12,7 @@ import SecondSwitcher from '../utils/SecondSwitcher';
 const Header = () => {
   const { theme, toggleTheme } = useStore();
   const { t } = useTranslation("layout");
-  
+
   // Yangi state scroll'ni boshqarish uchun
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -49,34 +49,37 @@ const Header = () => {
             {theme === 'dark' ? <FaSun size={24} /> : <FaMoon size={24} />}
           </div>
 
-          <LanguageSwitcher />
 
           <ul className='md:flex hidden flex-row items-center gap-[30px]'>
             <li className='cursor-pointer text-qora font-semibold dark:text-oq relative 
                 before:content-[""] before:absolute before:h-[2px] before:w-0 before:bg-qora dark:before:bg-oq before:top-[-10px] before:left-0
                 after:content-[""] after:absolute after:h-[2px] after:w-0 hover:after:duration-300 after:bg-qora dark:after:bg-oq after:bottom-[-10px] after:right-0
                 hover:before:w-full hover:after:w-full hover:before:duration-300 transition-all duration-500'>
-              {t("About")}
+              <a href="#qw">{t("About")}</a>
             </li>
             <li className='cursor-pointer text-qora font-semibold dark:text-oq relative 
                 before:content-[""] before:absolute before:h-[2px] before:w-0 before:bg-qora dark:before:bg-oq before:top-[-10px] before:left-0
                 after:content-[""] after:absolute after:h-[2px] hover:after:duration-300 after:w-0 after:bg-qora dark:after:bg-oq after:bottom-[-10px] after:right-0
                 hover:before:w-full hover:after:w-full hover:before:duration-300 transition-all duration-500'>
-              {t("Skills")}
+              <a href="#skill">{t("Skills")}</a>
             </li>
             <li className='cursor-pointer text-qora font-semibold dark:text-oq relative 
                 before:content-[""] before:absolute before:h-[2px] before:w-0 before:bg-qora dark:before:bg-oq before:top-[-10px] before:left-0
                 after:content-[""] after:absolute hover:after:duration-300 after:h-[2px] after:w-0 after:bg-qora dark:after:bg-oq after:bottom-[-10px] after:right-0
                 hover:before:w-full hover:before:duration-300 hover:after:w-full transition-all duration-500'>
-              {t("Portfolio")}
+              <a href="#port">{t("Portfolio")}</a>
             </li>
           </ul>
+
 
           <a href="tel:+998990182008">
             <Button className="rounded-full bg-qora text-oq dark:bg-gray dark:text-qora md:flex hidden" color='qora'>
               {t("Contact")}
             </Button>
           </a>
+
+          <LanguageSwitcher />
+
         </div>
 
         <div className='flex-row items-center gap-[20px] md:hidden flex'>

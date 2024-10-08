@@ -4,6 +4,10 @@ import ITBerries from './ITBerries'
 import AboutMe from './AboutMe'
 import InfoMYSkills from './InfoMYSkills'
 import Skills from './Skills'
+import OtherSkill from './OtherSkill'
+import Portfolio from './Portfolio'
+import Project from './Project'
+import Contact from './Contact'
 
 const Home = () => {
   return (
@@ -13,6 +17,10 @@ const Home = () => {
       <AboutMe />
       <InfoMYSkills />
       <Skills />
+      <OtherSkill />
+      <Portfolio />
+      <Project />
+      <Contact />
     </main>
   )
 }

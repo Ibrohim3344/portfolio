@@ -1,4 +1,3 @@
-
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import enlayout from "./en/layout";
@@ -19,6 +18,14 @@ import uzSkill from "./uz/myskills";
 import enskills from "./en/skill";
 import ruskills from "./ru/skill";
 import uzskills from "./uz/skill";
+import enPort from "./en/port";
+import ruPort from "./ru/port";
+import uzPort from "./uz/port";
+import enContact from "./en/contact";
+import ruContact from "./ru/contact";
+import uzContact from "./uz/contact";
+
+
 
 
 
@@ -31,7 +38,9 @@ const resources = {
         it: enIt,
         about: enAbout,
         skill: enSkill,
-        skills: enskills
+        skills: enskills,
+        port: enPort,
+        con: enContact
     },
     ru: {
         layout: rulayout,
@@ -39,8 +48,9 @@ const resources = {
         it: ruIt,
         about: ruAbout,
         skill: ruSkill,
-        skills: uzskills
-
+        skills: ruskills,
+        port: ruPort,
+        con: ruContact
     },
     uz: {
         layout: uzlayout,
@@ -48,8 +58,9 @@ const resources = {
         it: uzIt,
         about: uzAbout,
         skill: uzSkill,
-        skills: uzskills
-
+        skills: uzskills,
+        port: uzPort,
+        con: uzContact
     },
 };
 

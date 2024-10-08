@@ -1,6 +1,7 @@
 const skills = {
     Skills: "SKILLS",
-    now: "USING NOW:"
+    now: "USING NOW:",
+    other: "OTHER SKILLS:"
 }
 
 

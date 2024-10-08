@@ -14,7 +14,7 @@ const Skills = () => {
     const { t } = useTranslation("skills");
 
     return (
-        <section className='bg-gray pb-[50px] dark:bg-qora'>
+        <section id='skill' className='bg-gray pb-[50px] dark:bg-qora'>
             <div className='container'>
                 <div className='flex flex-col items-center gap-[50px]'>
                     <CustomIcon />
