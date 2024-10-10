@@ -108,8 +108,7 @@ const Contact = () => {
                 <div className='text-center flex flex-col items-center gap-[30px]'>
                     <Div text={t("con")} />
                     <p className='text-qora dark:text-oq'>
-                        Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra.
-                        <br /> In vel urna quis libero viverra facilisis ut ac est.
+                        {t("conn")}
                     </p>
                 </div>
 
@@ -122,12 +121,12 @@ const Contact = () => {
                                 placeholder={t("yourn")}
                                 type="text"
                                 name="name"
-                                className='w-full text-2xl border-b-2 border-gray-300 dark:border-gray-600 bg-transparent dark:bg-gray-800 p-4 focus:outline-none placeholder-transparent peer'
+                                className='w-full sm:text-2xl text-base border-b-2 border-gray-300 dark:border-gray-600 bg-transparent dark:bg-gray-800 p-4 focus:outline-none placeholder-transparent peer'
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
                             />
-                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-lg transition-all">
+                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-sm transition-all">
                                 {t("yourn")}
                             </label>
                         </div>
@@ -138,7 +137,7 @@ const Contact = () => {
                                 placeholder={t("email")}
                                 type="email"
                                 name="email"
-                                className='w-full text-2xl border-b-2 border-gray-300 dark:border-gray-600 bg-transparent p-4 focus:outline-none placeholder-transparent peer'
+                                className='w-full sm:text-2xl text-base border-b-2 border-gray-300 dark:border-gray-600 bg-transparent p-4 focus:outline-none placeholder-transparent peer'
                                 value={Email.email}
                                 onChange={handleEmailChange}
                                 required
@@ -149,7 +148,7 @@ const Contact = () => {
                                     textOverflow: 'ellipsis',
                                 }}
                             />
-                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-lg transition-all">
+                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-sm transition-all">
                                 {t("email")}
                             </label>
                         </div>
@@ -160,11 +159,11 @@ const Contact = () => {
                                 placeholder={t("phone")}
                                 type="tel"
                                 name="phone"
-                                className='w-full text-2xl border-b-2 border-gray-300 dark:border-gray-600 bg-transparent p-4 focus:outline-none placeholder-transparent peer'
+                                className='w-full sm:text-2xl text-base border-b-2 border-gray-300 dark:border-gray-600 bg-transparent p-4 focus:outline-none placeholder-transparent peer'
                                 value={Phone.number}
                                 onChange={handlePhoneChange}
                             />
-                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-lg transition-all">
+                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-sm transition-all">
                                 {t("phone")}
                             </label>
                         </div>
@@ -174,25 +173,24 @@ const Contact = () => {
                             <input
                                 placeholder={t("mass")}
                                 name="message"
-                                className='w-full text-2xl border-b-2 border-gray-300 dark:border-gray-600 bg-transparent p-4 focus:outline-none placeholder-transparent peer'
+                                className='w-full sm:text-2xl text-base border-b-2 border-gray-300 dark:border-gray-600 bg-transparent p-4 focus:outline-none placeholder-transparent peer'
                                 value={Massage.massage}
                                 onChange={handleMassageChange}
                                 rows="4"
                                 required
                             />
-                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-lg transition-all">
+                            <label className="absolute left-0 top-1 text-gray-400 dark:text-gray-500 peer-placeholder-shown:top-6 peer-placeholder-shown:text-sm peer-placeholder-shown:text-gray-500 peer-focus:top-1 peer-focus:text-sm transition-all ">
                                 {t("mass")}
                             </label>
                         </div>
 
                         <div className='flex items-center justify-center'>
-                            <button className="relative text-xl px-[10px] py-[5px] border-2 font-semibold border-transparent dark:text-oq text-qora group" type='submit'>
+                            <button className="relative sm:text-xl text-sm px-[10px] py-[5px] border-2 font-semibold border-transparent dark:text-oq text-qora group" type='submit'>
                                 <span className="relative z-10">{t("sub")}</span>
                                 <span className="absolute inset-0 border-l-2 border-r-2 group-hover:border-none transition-all duration-300 ease-in-out"></span>
                                 <span className="absolute left-0 bottom-0 w-0 h-[2px] dark:bg-oq bg-qora group-hover:w-full transition-all duration-300 ease-in-out"></span>
                             </button>
                         </div>
-
                     </form>
                 </div>
             </div>
