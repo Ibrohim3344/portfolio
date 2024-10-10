@@ -56,7 +56,7 @@ const Header = () => {
           <Avatar src={me} alt="avatar" />
         </div>
 
-        <div className='md:flex hidden flex-row items-center gap-[30px]'>
+        <div className='lg:flex hidden flex-row items-center gap-[30px]'>
           <div
             onClick={toggleTheme}
             className="md:flex hidden cursor-pointer text-qora dark:text-oq"
@@ -94,7 +94,7 @@ const Header = () => {
           <LanguageSwitcher />
         </div>
 
-        <div className='flex-row items-center gap-[20px] md:hidden flex'>
+        <div className='flex-row items-center gap-[20px] lg:hidden flex'>
           <SecondSwitcher />
           <DrawerDefault />
         </div>

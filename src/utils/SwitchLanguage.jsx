@@ -9,16 +9,17 @@ function LanguageSwitcher() {
     const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem("language") || "en");
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
+    // Sahifa yuklanganda tilni to'g'rilash uchun `useEffect` 
     useEffect(() => {
-        if (!localStorage.getItem("language")) {
-            localStorage.setItem("language", "en");
-        }
-        i18n.changeLanguage(selectedLanguage);
-    }, [selectedLanguage, i18n]);
+        const savedLanguage = localStorage.getItem("language") || "en";
+        setSelectedLanguage(savedLanguage);  // LocalStorage'dagi tilni select option uchun o'zgartiramiz
+        i18n.changeLanguage(savedLanguage);  // Sayt tilini ham mos ravishda o'zgartiramiz
+    }, [i18n]);
 
     const handleLanguageChange = (lang) => {
         localStorage.setItem("language", lang);
         setSelectedLanguage(lang);
+        i18n.changeLanguage(lang); // Tilni o'zgartirish
         setDropdownOpen(false); // dropdownni yopamiz
     };
 

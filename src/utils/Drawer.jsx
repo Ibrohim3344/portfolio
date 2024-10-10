@@ -55,7 +55,7 @@ export function DrawerDefault() {
 
     return (
         <React.Fragment>
-            <i className="fa-solid text-xl fa-bars text-qora dark:text-oq md:hidden flex" onClick={openDrawer}></i>
+            <i className="fa-solid text-xl fa-bars text-qora dark:text-oq lg:hidden flex" onClick={openDrawer}></i>
             <Drawer open={open} onClose={closeDrawer} className="p-4 bg-gray dark:bg-qora shadow-lg shadow-qora dark:shadow-oq" placement="right">
                 <div className="mb-6 flex items-center justify-between">
                     <Typography variant="h5" color="blue-gray">

@@ -22,7 +22,7 @@ const AboutMe = () => {
             <div className='container'>
                 <div className='flex flex-col items-center gap-[50px]' data-aos="fade-up" data-aos-offset="100">
                     <Div text={t("about")} />
-                    <p className='text-qora text-center dark:text-oq'>Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed <br /> viverra. In vel urna quis libero viverra facilisis ut ac est.</p>
+                    <p className='text-qora text-center dark:text-oq'>{t("th")}</p>
                     <Btn Text={t("Read")} />
                     <CustomIcon />
                 </div>
