@@ -19,6 +19,7 @@ const Info = () => {
                         <div className="hidden md:flex">
                             <TypeAnimation
                                 className='text-5xl lg:text-5xl xl:text-6xl text-qora dark:text-oq font-semibold'
+                                key={localStorage.getItem("language")}
                                 sequence={[
                                     t("surname"),
                                     2000,
